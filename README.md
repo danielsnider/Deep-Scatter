@@ -40,7 +40,7 @@ layout:
 ```
 sudo pip install flask
 sudo pip install gunicorn
-npm install bootstrap-select
+npm install
 pip install flask-thumbnails==1.0.3
 
 ```
