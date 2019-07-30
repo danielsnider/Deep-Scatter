@@ -39,10 +39,8 @@ layout:
 
 ```
 sudo pip install flask
-sudo pip install gunicorn
 npm install
-pip install flask-thumbnails==1.0.3
-
+pip install tsne flask flask-thumbnails==1.0.3 ipython pillow sklearn click mahotas matplotlib numpy pandas pylab scipy skimage tensorflow
 ```
 
 ### Run
@@ -54,6 +52,7 @@ export FLASK_APP=server.py
 python -m flask run --host=0.0.0.0 --port=5000
 
 (with gunicorn)
+sudo pip install gunicorn
 sudo gunicorn server:app -b:80 --limit-request-line 0 --timeout 0 --access-logfile -
 
 (for production server)
