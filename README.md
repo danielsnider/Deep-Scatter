@@ -38,7 +38,6 @@ layout:
 ### Installation
 
 ```
-sudo pip install flask
 npm install
 pip install tsne flask flask-thumbnails==1.0.3 ipython pillow sklearn click mahotas matplotlib numpy pandas pylab scipy skimage tensorflow
 ```
