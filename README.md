@@ -35,6 +35,7 @@ Screenshot:
 ### Installation
 
 ```
+sudo apt-get install python-numpy python-scipy python-matplotlib
 npm install
 pip install tsne flask flask-thumbnails==1.0.3 ipython pillow sklearn click mahotas matplotlib numpy pandas pylab scipy skimage tensorflow
 ```
