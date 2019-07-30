@@ -7,7 +7,7 @@ Our web app provides a **"No code. No installation"** platform for researchers t
 
 ## Example
 <p align="center">
- <img src="https://github.com/bessaFan/ML-playground/blob/master/static/images/animals-example-black.png" height="455px">
+ <img src="https://github.com/danielsnider/deep-scatter/blob/master/static/images/animals-example-black.png" height="455px">
 </p>
 
 
@@ -25,8 +25,9 @@ Our web app provides a **"No code. No installation"** platform for researchers t
 
 Screenshot:
 <p align="center">
+<img src="https://github.com/danielsnider/deep-scatter/blob/master/static/images/deepscatter.PNG?raw=true" alt="Website" >
+ <img src="https://github.com/danielsnider/deep-scatter/blob/master/static/images/deepscatter-options.png?raw=true" alt="Website" >
 
-<img src="https://github.com/bessaFan/generate_tsne_plots_online/blob/master/static/images/MLplayground.jpg?raw=true" alt="Website" >
 </p>
 
 ## Set up
