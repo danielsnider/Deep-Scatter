@@ -23,11 +23,7 @@ Our web app provides a **"No code. No installation"** platform for researchers t
 | [download_models.sh](https://github.com/bessaFan/ML-playground/blob/master/models/download_models.sh "download_models.sh")|Command line download models (move models under models folder after download)|
 
 
-
-## Website 
-[Checkout our **awesome** website here!!](http://23.233.65.16/)
-
-layout:
+Screenshot:
 <p align="center">
 
 <img src="https://github.com/bessaFan/generate_tsne_plots_online/blob/master/static/images/MLplayground.jpg?raw=true" alt="Website" >
