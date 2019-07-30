@@ -17,7 +17,7 @@ Our web app provides a **"No code. No installation"** platform for researchers t
 |-------------------------|----------------------------------------------------------------------------------------------------|
 | [templates](https://github.com/bessaFan/generate_tsne_plots_online/tree/master/templates "templates") | Main website code folder! (where [main.html](https://github.com/bessaFan/generate_tsne_plots_online/blob/master/templates/main.html "main.html") is found)|
 | [static](https://github.com/bessaFan/generate_tsne_plots_online/tree/master/static "static")| Code for front-end styling |
-| [tsne_lib](https://github.com/bessaFan/generate_tsne_plots_online/tree/master/tsne_lib "tsne_lib")| Where a bunch of cool backend code is found|
+| [tsne_lib/tsne_script.py](https://github.com/bessaFan/generate_tsne_plots_online/tree/master/tsne_lib "tsne_lib")| Where a bunch of cool backend code is found|
 | [clean_up.py](https://github.com/bessaFan/generate_tsne_plots_online/blob/master/clean_up.py "clean_up.py")| Automatically delete the oldest folders, keeping only the 100 most recent ones|
 | [server.py](https://github.com/bessaFan/generate_tsne_plots_online/blob/master/server.py "server.py")|Website server|
 | [download_models.sh](https://github.com/bessaFan/ML-playground/blob/master/models/download_models.sh "download_models.sh")|Command line download models (move models under models folder after download)|
