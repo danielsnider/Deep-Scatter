@@ -26,7 +26,7 @@ app.config['THUMBNAIL_DEFAUL_FORMAT'] = 'JPEG'
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
 app.config['MAX_CONTENT_LENGTH'] = 300 * 1024 * 1024 # Allow 300 MiB maximum upload for all images at once
 FILE_SIZE_LIMIT = 3 * 1024 * 1024 # 3 MiB
-NUM_IMAGES_LIMIT = 60
+NUM_IMAGES_LIMIT = 2000
 
 @app.route("/")
 def main():
@@ -55,7 +55,7 @@ def main():
 
     if (len(files)!=0):
       plot_exists=True
-      plot_name= max(files, key=os.path.getctime).encode('ascii','ignore')    #getting the name of the newest file
+      plot_name= max(files, key=os.path.getctime).decode("utf-8")    #getting the name of the newest file
       plot_name_no_dir=plot_name[pathlength:]
 
     csv_exists = False
@@ -68,7 +68,7 @@ def main():
 
     if (len(files)!=0):
       csv_exists=True
-      csv_name= max(files, key=os.path.getctime).encode('ascii','ignore')    #getting the name of the newest file
+      csv_name= max(files, key=os.path.getctime).decode("utf-8")    #getting the name of the newest file
       csv_name_no_dir=csv_name[pathlength:]
 
 
@@ -95,11 +95,11 @@ def tsne():
     early_exaggeration = int (request.args.get('early_exaggeration'))
     learning_rate = int (request.args.get('learning_rate'))
     # resolution = int( request.args.get('resolution'))
-    resolution = 200 # hard coded this to simplify front-end
+    resolution = 600 # hard coded this to simplify front-end
     CanvasSize = int (request.args.get('CanvasSize'))
     DotsPerInchs = int (request.args.get('DotsPerInchs'))
     model_name = request.args.get('model_name')
-
+    algorithm_name = request.args.get('algorithm_name')
     # Get colors and images information
     colors_text = request.args.get('colors')
     # Convert from badly formatted json to dict
@@ -113,11 +113,11 @@ def tsne():
       for hex1 in colors_dict[section]['hex']: 
         hex_number+= hex1
       for files in colors_dict[section]['images']:
-        colors.append('#'+hex_number.encode('ascii','ignore')) 
+        colors.append('#'+ hex_number)   
       hex_number = "" 
 
-    print 'creating tsne plot'
-    tsne_data = tsne_script.tsne_images(session_id, colors_dict, resolution, perplexity,early_exaggeration, learning_rate, DotsPerInchs,CanvasSize, colors, model_name)
+    print('creating tsne plot')
+    tsne_data = tsne_script.tsne_images(session_id, colors_dict, resolution, perplexity,early_exaggeration, learning_rate, DotsPerInchs,CanvasSize, colors, model_name, algorithm_name)
     return redirect('/?session=%s#try' % session_id)
 
 def allowed_file(filename):

@@ -32,7 +32,7 @@ def resnet(filenames, session_id, res,perplexity, early_exaggeration, learning_r
   # Load images
   images = np.zeros((len(filenames), 224, 224, 3), dtype=np.float32)
   for i, imageName in enumerate(filenames): 
-    print i, imageName
+    print(i, imageName)
     img = skimage.io.imread(imageName)
     if len(img.shape) == 2:
       # we have a 2D, black and white image but  vgg16 needs 3 channels

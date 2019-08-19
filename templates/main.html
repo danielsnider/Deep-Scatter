@@ -278,7 +278,7 @@
       }
     }
     // Check if number of files exceed limit
-    num_image_limit = 60;
+    num_image_limit = 2000;
     existing_images = document.getElementsByClassName('input-image');
     num_existing_images = existing_images.length;
     if (num_existing_images + files.length > num_image_limit){
@@ -758,9 +758,13 @@
     <span id="helpBlock" class="help-block" style="padding-right:16%">Choose a non-linear manifold learning algorithm to perform dimensionality reduction on the features extracted by the machine learning model. This will embed each image into two dimensional space so that they can be plotted. The result is still representitive of the differences in the higher dimenional feature space.</span>
     <div class="form-group">
       <label for="exampleDropdownForm" class="col-sm-4 control-label">Algorithm</label>
-      <select class="selectpicker show-tick col-xs-6" name = "model_name">
-        <option data-subtext="t-distributed Stochastic Neighbor Embedding">t-SNE</option>
-        <option data-subtext="Uniform Manifold Approximation and Projection" disabled>UMAP</option>
+      <select class="selectpicker show-tick col-xs-6" name = "algorithm_name">
+	<option data-subtext="t-distributed Stochastic Neighbor Embedding">NEW open-t-SNE (create new parameters)</option>
+	<option data-subtext="t-distributed Stochastic Neighbor Embedding">APPLY open-t-SNE (use set parameters)</option>
+        <option data-subtext="t-distributed Stochastic Neighbor Embedding">NEW t-SNE (create new parameters)</option>
+	<option data-subtext="t-distributed Stochastic Neighbor Embedding">APPLY t-SNE (use set parameters)</option>
+        <option data-subtext="Uniform Manifold Approximation and Projection">NEW UMAP (create new parameters)</option>
+	<option data-subtext="Uniform Manifold Approximation and Projection">APPLY UMAP (use set parameters)</option>
         <option data-subtext="Local Tangent Space Alignment" disabled>LTSA</option>
         <option data-subtext="Modified Locally Linear Embedding" disabled>Modified LLE</option>
         <option data-subtext="Multi-dimensional Scaling" disabled>MDS</option>
@@ -802,14 +806,14 @@
       <label for="inputEmail3" class="col-sm-4 control-label">Dots Per Inchs</label>
       <img src="static/images/tooltip.png" style="width:50px;height:38px;" class="btn btn-secondary invert" data-toggle="tooltip" data-placement="right" title="The resolution of the final plot. The bigger the value, the better the image quality. However, the plot generating speed increases as the resolution gets higher.">
       <div class="col-sm-6">
-        <input type="number" class="form-control" name="DotsPerInchs" value="500" placeholder="DotsPerInchs">
+        <input type="number" class="form-control" name="DotsPerInchs" value="1000" placeholder="DotsPerInchs">
       </div>
     </div>
     <div class="form-group">
       <label for="inputEmail3" class="col-sm-4 control-label">Canvas Size</label>
       <img src="static/images/tooltip.png" style="width:50px;height:38px;" class="btn btn-secondary invert" data-toggle="tooltip" data-placement="right" title="The smaller the canvas the more likely images will overlap. A larger canvas size will make images appear futher apart but also smaller.">
       <div class="col-sm-6">
-        <input type="number" class="form-control"  name="CanvasSize" value="4000" placeholder="canvas size">
+        <input type="number" class="form-control"  name="CanvasSize" value="14000" placeholder="canvas size">
       </div>
     </div>
     <!-- set the loading icon visible when the "generate" tSNE button is pressed  -->

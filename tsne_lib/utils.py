@@ -72,7 +72,7 @@ def get_colors(n, cmap='gist_rainbow'):
     for i in range(n):
       color_list.append(color_map(i))
 
-    print color_list
+    print(color_list)
     return color_list
 
 

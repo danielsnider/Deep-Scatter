@@ -34,5 +34,5 @@ def get_youngest_file(files):
 files=list(glob.glob('/home/bessa/generate_tsne_plots_online/static/uploads/*'))
 while len(files) >100:
 	files=list(glob.glob('/home/bessa/generate_tsne_plots_online/static/uploads/*'))
-	print 'oldest:', get_oldest_file(files)
+	print('oldest:', get_oldest_file(files))
 	shutil.rmtree(get_oldest_file(files))
