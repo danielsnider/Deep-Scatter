@@ -37,8 +37,8 @@ Screenshot:
 ```
 cd Deep-Scatter
 npm install
-sudo apt-get install python-numpy python-scipy python-matplotlib
-pip install numpy Cython tsne flask ipython pillow sklearn click mahotas matplotlib pandas pylab scipy skimage tensorflow
+sudo apt-get install python3-numpy python3-scipy python3-matplotlib
+pip3.7 install numpy Cython flask ipython pillow sklearn click mahotas matplotlib pandas scipy skimage tensorflow
 ```
 
 ### Run
